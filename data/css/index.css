@@ -1,0 +1,11 @@
+body{
+  background-color:#060C15;
+}
+
+.time-reloj{
+  font-size:5rem;
+  font-family:monospace;
+  color:#16B8C9;
+  margin-left:33%;
+  margin-top:20%;
+}
