@@ -54,29 +54,40 @@ class domControler{
      contenArea.appendChild(name)
   }settings(){
     settingsBottom.addEventListener('click',() => {
+      //Con esta clase hacemos visible el menu 
       menu.classList.toggle('control');
+      //clase con la animacion
       menu.classList.toggle('bounceIn');
     })
-    close.addEventListener('click',() => { 
+    close.addEventListener('click',() => {
+      //Con esta clase hacemos visible el menu 
       menu.classList.toggle('control');
+      //clase con la animacion
       menu.classList.toggle('bounceIn');
     })
   }themes(){
     let url = 'data/img/dom.png';
     modeActive.innerHTML = '<img src="' + url +  '" ' + 'class="mode-day">';
-    body.style.backgroundColor = ' #e5e7e9'; 
+    body.style.backgroundColor = ' #e5e7e9';
+    timeClock.style.color = 'black';
     modeActive.addEventListener('click',() => {
     let url = 'data/img/luna-creciente.png';
     const modeDay = document.querySelector('.mode-day');
     modeActive.classList.toggle('active-mod');
     const activeMod = document.querySelector('.active-mod');
+    modeActive.style.backgroundColor = 'black'; 
+    segundosD.style.color = 'black';
     if(activeMod === null){
       let url = 'data/img/dom.png';
       modeActive.innerHTML = '<img src="' + url +  '" ' + 'class="mode-day">';
       body.style.backgroundColor = ' #e5e7e9'; 
+      modeActive.style.backgroundColor = 'white'; 
+      timeClock.style.color = 'black';
     }
     activeMod.innerHTML = '<img src="' + url +  '" ' + 'class="mode-day">';
     body.style.backgroundColor = '#060C15'; 
+    timeClock.style.color = '#16B8C9';
+    segundosD.style.color = '#16B8C9';
     })
   }
 }
